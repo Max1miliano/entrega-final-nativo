@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Anton", sans-serif;
+}
+p {
+  font-family: "Anton", sans-serif;
+}
+
+.background {
+  filter: blur(2px);
+  width: 100%;
+  height: 100%;
+  grid-area: 1/1/-1/-1;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(imagenes/background.jpg);
+  position: fixed;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 60px 1fr 1fr;
+  background-image: url(imagenes/background.jpg) cover no-repeat;
+}
+
+.navbar {
+  grid-area: 1/1/2/2;
+  z-index: 1;
+  align-self: center;
+}
+
+.items {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+}
+
+.tittle {
+  grid-area: 2/1/3/2;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.tittle p {
+  font-family: "Anton", sans-serif;
+  font-size: 25px;
+  width: 400px;
+}
+
+.mainTitle {
+  grid-area: 1/1/2/2;
+  animation: bounce-down 1.6s linear infinite;
+}
+@keyframes bounce-down {
+  25% {
+    transform: translateY(-4px);
+  }
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(4px);
+  }
+}
+
+
+.equipo {
+  grid-area: 4/1/5/2;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content max-content;
+  place-items: center;
+  margin: 2rem;
+}
+
+.equipo img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+    box-shadow: 0px 8px 20px -9px black;
+}
+
+.equipo h1 {
+  grid-area: 1/2/2/3;
+}
+
+.equipo p {
+  grid-area: 2/2/3/3;
+}
+
+.equipoDescription{
+    width: 20rem;
+    text-align: center;
+  color: white;
+  line-height: 45px;
+    text-shadow: 1px 1px 4px black;
+}
+
+
+.profiles {
+  grid-area: 1/1/3/2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  gap: 5rem;
+  padding: 1rem;
+}
+.profiles h4 {
+  font-size: 20px;
+}
+
+.profiles p {
+  font-size: 15px;
+  color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+.video {
+    padding: 1rem;
+    grid-area: 3/1/4/2;
+    z-index: 5;
+    margin: 0 auto;
+}
+
+/* clases del video editadas  */
+iframe {
+    border-radius: 10px 10px 10px 10px;
+}

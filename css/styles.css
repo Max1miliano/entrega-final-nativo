@@ -25,7 +25,7 @@ p {
   z-index: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(imagenes/background.jpg);
+  background-image: url(../imagenes/background.jpg);
   position: fixed;
 }
 
@@ -33,7 +33,6 @@ p {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 60px 1fr 1fr;
-  background-image: url(imagenes/background.jpg) cover no-repeat;
 }
 
 .navbar {

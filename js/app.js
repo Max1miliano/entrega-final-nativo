@@ -41,7 +41,7 @@
 //     if ((i === 2) || (i === 6)) {
 //         alert('Esto es una marca de conteo' + i);
 //     }
-    
+
 // }
 
 // Multiplicar
@@ -88,3 +88,28 @@
 //     }
 //     entrada = prompt("Ingresá un nombre");
 // }
+
+// FUNCIONES
+
+// function calculadora(primerNumero, segundoNumero, operacion) {
+//     switch (operacion) {
+//         case "+":
+//             return primerNumero + segundoNumero;
+//             break;
+//         case "-":
+//             return primerNumero - segundoNumero;
+//             break;
+//         case "*":
+//             return primerNumero * segundoNumero;
+//             break;
+//         case "/":
+//             return primerNumero / segundoNumero;
+//             break;
+//         default:
+//             return 0;
+//             break;
+//     }
+// }
+// let resultado = calculadora(10, 5, "+");
+
+// console.log(resultado);

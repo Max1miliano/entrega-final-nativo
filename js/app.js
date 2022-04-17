@@ -113,3 +113,93 @@
 // let resultado = calculadora(10, 5, "+");
 
 // console.log(resultado);
+
+
+
+// OBJETOS
+// const user = {
+//     nombre: prompt('Ingresá tu nombre'),
+//     email: prompt('Ingresá tu email')
+// }
+
+// console.log(user);
+// alert("Hola " + user.nombre);
+
+// function user(nombre, email) {
+//     this.nombre = prompt('Ingresá tu nombre');
+//     this.email = prompt('Ingresá tu apellido');
+// }
+
+// const user1 = new user(this.nombre, this.apellido, this.edad)
+
+// console.log(user1);
+
+// function Persona(literal) {
+//     this.nombre = literal.nombre;
+//     this.apellido = literal.apellido
+// }
+
+// const persona1 = new Persona({ nombre: "Homero", apellido: "Simpson" });
+// console.log(persona1);
+
+// class user {
+//     constructor(nombre, email) {
+//         this.nombre = prompt('Ingresar nombre');
+//         this.email = prompt('Ingresar email');
+//     }
+
+//     hablar() {
+//         console.log("Hola soy " + this.nombre + " y mi email es " + this.email)
+//     }
+// }
+// const user1 = new user();
+
+// user1.hablar()
+
+// let cadena = "Hola Maxi";
+
+// console.log(cadena.length);
+// console.log(cadena.toLocaleLowerCase());
+// console.log(cadena.toLocaleUpperCase());
+
+// function Usuario(nombre, apellido) {
+//     this.nombre = nombre;
+//     this.apellido = apellido;
+//     this.hablar = function () {
+//         console.log('Hola ' + this.nombre + ' ' + this.apellido);
+//     }
+// }
+
+// const usuario1 = new Usuario('Maxi', 'Pompas');
+
+// usuario1.hablar()
+
+// const persona1 = { nombre: 'Maxi', apellido: 'Pompas' }
+// console.log('nombre' in persona1);
+// console.log('apellido' in persona1);
+
+// for (const propiedad in persona1) {
+//     console.log(persona1[propiedad]);
+// }
+
+class Usuario { 
+    constructor(nombre, clave) { 
+        this.nombre = prompt('Ingrese su nombre de usuario');
+        this.clave = prompt('Ingrese su clave');
+        this.login = false;
+    }
+    iniciar() { 
+        if (this.nombre != 0 && this.clave != 0) {
+            this.login = true;
+            alert('Estás logeado');
+        } else {
+            this.login = false;
+            alert('Credenciales incorrectas');
+        }
+        console.log(this.login);
+    }
+}
+
+const usuario1 = new Usuario();
+
+usuario1.iniciar();

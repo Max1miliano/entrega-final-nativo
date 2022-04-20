@@ -41,7 +41,7 @@
 //     if ((i === 2) || (i === 6)) {
 //         alert('Esto es una marca de conteo' + i);
 //     }
-    
+
 // }
 
 // Multiplicar
@@ -88,3 +88,43 @@
 //     }
 //     entrada = prompt("Ingresá un nombre");
 // }
+
+// Recorrrer todos los elementos de un array
+// const numeros = [1, 2, 3, 4, 5]
+
+// for (let index = 0; index < 5; index++) {
+//     alert(numeros[index]);
+// }
+
+// Me imprime el total de elementos dentro del array
+// console.log(numeros.length);
+
+
+// const numeros = [1, 2, 3, 4, 5]
+// for (let index = 0; index < numeros.length; index++) {
+//     console.log(numeros[index]);
+// }
+
+// numeros.push('otro elemento al final');
+// numeros.unshift('otro elemento al inicio');
+// console.log(numeros);
+
+// numeros.shift()
+// numeros.pop()
+
+// numeros.splice(0,2)
+
+// Generar un string con todos los elementos del array separados por lo que le espefique en las comillas
+// console.log(numeros.join('*'));
+
+// const letras = ['A', 'B', 'C', 'D', 'E', 'F']
+
+// const agrupar = numeros.concat(letras)
+
+// console.log(agrupar);
+
+// const nombres = ['Maxi', 'Jesa', 'Igna', 'Pogon', 'Cuello']
+
+// const masculinos = nombres.slice(0, 2);
+
+// console.log(masculinos)

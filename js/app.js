@@ -89,117 +89,195 @@
 //     entrada = prompt("Ingresá un nombre");
 // }
 
-// FUNCIONES
+// Recorrrer todos los elementos de un array
+// const numeros = [1, 2, 3, 4, 5]
 
-// function calculadora(primerNumero, segundoNumero, operacion) {
-//     switch (operacion) {
-//         case "+":
-//             return primerNumero + segundoNumero;
-//             break;
-//         case "-":
-//             return primerNumero - segundoNumero;
-//             break;
-//         case "*":
-//             return primerNumero * segundoNumero;
-//             break;
-//         case "/":
-//             return primerNumero / segundoNumero;
-//             break;
-//         default:
-//             return 0;
-//             break;
-//     }
-// }
-// let resultado = calculadora(10, 5, "+");
-
-// console.log(resultado);
-
-
-
-// OBJETOS
-// const user = {
-//     nombre: prompt('Ingresá tu nombre'),
-//     email: prompt('Ingresá tu email')
+// for (let index = 0; index < 5; index++) {
+//     alert(numeros[index]);
 // }
 
-// console.log(user);
-// alert("Hola " + user.nombre);
+// Me imprime el total de elementos dentro del array
+// console.log(numeros.length);
 
-// function user(nombre, email) {
-//     this.nombre = prompt('Ingresá tu nombre');
-//     this.email = prompt('Ingresá tu apellido');
+
+// const numeros = [1, 2, 3, 4, 5]
+// for (let index = 0; index < numeros.length; index++) {
+//     console.log(numeros[index]);
 // }
 
-// const user1 = new user(this.nombre, this.apellido, this.edad)
+// numeros.push('otro elemento al final');
+// numeros.unshift('otro elemento al inicio');
+// console.log(numeros);
 
-// console.log(user1);
+// numeros.shift()
+// numeros.pop()
 
-// function Persona(literal) {
-//     this.nombre = literal.nombre;
-//     this.apellido = literal.apellido
+// numeros.splice(0,2)
+
+// Generar un string con todos los elementos del array separados por lo que le espefique en las comillas
+// console.log(numeros.join('*'));
+
+// const letras = ['A', 'B', 'C', 'D', 'E', 'F']
+
+// const agrupar = numeros.concat(letras)
+
+// console.log(agrupar);
+
+// const nombres = ['Maxi', 'Jesa', 'Igna', 'Pogon', 'Cuello']
+
+// const masculinos = nombres.slice(0, 2);
+
+// console.log(masculinos)
+
+
+// Funciones de orden superior
+// function mayorQue(n) {
+//     return (m) => m > n
 // }
 
-// const persona1 = new Persona({ nombre: "Homero", apellido: "Simpson" });
-// console.log(persona1);
+// let mayorQueDiez = mayorQue(10)
 
-// class user {
-//     constructor(nombre, email) {
-//         this.nombre = prompt('Ingresar nombre');
-//         this.email = prompt('Ingresar email');
-//     }
+// console.log(mayorQueDiez(12));
+// console.log(mayorQueDiez(9));
 
-//     hablar() {
-//         console.log("Hola soy " + this.nombre + " y mi email es " + this.email)
-//     }
-// }
-// const user1 = new user();
 
-// user1.hablar()
-
-// let cadena = "Hola Maxi";
-
-// console.log(cadena.length);
-// console.log(cadena.toLocaleLowerCase());
-// console.log(cadena.toLocaleUpperCase());
-
-// function Usuario(nombre, apellido) {
-//     this.nombre = nombre;
-//     this.apellido = apellido;
-//     this.hablar = function () {
-//         console.log('Hola ' + this.nombre + ' ' + this.apellido);
+// Retornar funciones
+// function asignarOperacion(op) {
+//     if (op == "sumar") {
+//         return (a, b) => a + b
+//     } else if (op == "restar") {
+//         return (a,b) => a - b
 //     }
 // }
 
-// const usuario1 = new Usuario('Maxi', 'Pompas');
+// let suma = asignarOperacion("sumar");
+// let resta = asignarOperacion("restar");
 
-// usuario1.hablar()
+// console.log(suma(4, 10));
+// console.log( resta(10, 5) );
 
-// const persona1 = { nombre: 'Maxi', apellido: 'Pompas' }
-// console.log('nombre' in persona1);
-// console.log('apellido' in persona1);
-
-// for (const propiedad in persona1) {
-//     console.log(persona1[propiedad]);
+// Recibir funciones por parametros
+// function porCadaUno(arr, fn) {
+//     for (const el of arr) {
+//         fn(el)
+//     }
 // }
+// const numeros = [1, 2, 3, 4]
 
-class Usuario { 
-    constructor(nombre, clave) { 
-        this.nombre = prompt('Ingrese su nombre de usuario');
-        this.clave = prompt('Ingrese su clave');
-        this.login = false;
-    }
-    iniciar() { 
-        if (this.nombre != 0 && this.clave != 0) {
-            this.login = true;
-            alert('Estás logeado');
-        } else {
-            this.login = false;
-            alert('Credenciales incorrectas');
-        }
-        console.log(this.login);
-    }
-}
+// porCadaUno(numeros, console.log);
 
-const usuario1 = new Usuario();
+// Método for each
+// Ejecuta un bloque
+// const numeros = [1, 2, 3, 4]
 
-usuario1.iniciar();
+// numeros.forEach(element => {
+//     console.log(element);;
+// });
+
+
+
+// Método find()
+// Busca según la condicion en el parametro
+// let cursos = [
+//     {
+//         nombre: "javascript", precio: 15000
+//     },
+//     {
+//         nombre: "ReactJs", precio: 20000
+//     }
+// ]
+
+// let resultado1 = cursos.find((el) => el.nombre === "ReactJs")
+// let resultado2 = cursos.find((el) => el.nombre === "javascript")
+
+// console.log(resultado1);
+// console.log(resultado2);
+
+// const cursos = [
+//     { nombre: 'Javascript', precio: 15000 },
+//     { nombre: 'ReactJS', precio: 22000 },
+//     { nombre: 'AngularJS', precio: 22000 },
+//     { nombre: 'Desarrollo Web', precio: 16000 },
+// ]
+
+// Metodo filter filter()
+// const resultado = cursos.filter((el) => el.nombre.includes('JS'))
+// const resultado2 = cursos.filter((el) => el.precio > 14000)
+
+// console.log(resultado)
+// console.log(resultado2);
+
+// //Método some
+// console.log(cursos.some((el) => el.nombre == "Desarrollo Web"))
+// // true
+// console.log(cursos.some((el) => el.nombre == "VueJS"))
+// // false
+
+
+// // Metodo map
+// const nombres = cursos.map((el) => el.nombre)
+// console.log(nombres)
+
+//Crear un nuevo array con algún cambio.
+// const actualizado = cursos.map((el) => {
+//     return {
+//         nombre: el.nombre,
+//         precio: el.precio * 1.25
+//     }
+// })
+
+// console.log(actualizado)
+
+//
+// const numeros = [1, 2, 3, 4, , 6]
+// const total = numeros.reduce((acumulador, elemento) => acumulador + elemento, 5)
+
+// console.log(total)
+//
+
+// Metodo de reduce
+// const miCompra = [
+//     { nombre: 'Desarrollo Web', precio: 20000 },
+//     { nombre: 'Javascript', precio: 18750 },
+//     { nombre: 'ReactJS', precio: 27500 }
+// ]
+
+// const total = miCompra.reduce((acc, el) => acc + el.precio, 0)
+// console.log(total) // 66250
+
+// Metodo sort()
+// const items = [
+//     { name: 'Pikachu', price: 21 },
+//     { name: 'Charmander', price: 37 },
+//     { name: 'Pidgey', price: 45 },
+//     { name: 'Squirtle', price: 60 }
+// ]
+// items.sort((a, b) => {
+//     if (a.name > b.name) {
+//         return 1;
+//     }
+//     if (a.name < b.name) {
+//         return -1;
+//     }
+//     // a es igual a b
+//     return 0;
+// })
+
+// const productos = [{ id: 1, producto: "Arroz", precio: 125 },
+// { id: 2, producto: "Fideo", precio: 70 },
+// { id: 3, producto: "Pan", precio: 50 },
+// { id: 4, producto: "Flan", precio: 100 }]
+
+// const buscado = productos.find(producto => producto.id === 3)
+// console.log(buscado) //{id: 3, producto: "Pan", precio: 50}
+
+// const existe = productos.some(producto => producto.nombre === “Harina”)
+// console.log(existe) // false
+
+// const baratos = productos.filter(producto => producto.precio < 100)
+// console.log(baratos)
+// // [{id: 2,producto:"Fideo",precio:70},{id:3,producto:"Pan",precio: 50}]
+
+// const listaNombres = productos.map(producto => producto.nombre)
+// console.log(listaNombres);
+// //[“Arroz”, “Fideo”, “Pan”, “Flan”]

@@ -127,7 +127,7 @@
 
 // const masculinos = nombres.slice(0, 2);
 
-<<<<<<< HEAD
+
 // console.log(masculinos)
 
 
@@ -282,6 +282,6 @@
 // const listaNombres = productos.map(producto => producto.nombre)
 // console.log(listaNombres);
 // //[“Arroz”, “Fideo”, “Pan”, “Flan”]
-=======
+
 // console.log(masculinos)
->>>>>>> desafios
+

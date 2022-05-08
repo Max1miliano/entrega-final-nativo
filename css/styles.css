@@ -49,6 +49,7 @@ label {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 60px 1fr 1fr;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -290,6 +291,7 @@ form {
 form input {
     border-radius: 5px;
     border: 0;
+    padding: 1rem;
 }
 
 .button {
@@ -310,9 +312,10 @@ form input {
 
 .login {
     z-index: 999;
-    background-color: red;
+    background-color: white;
     grid-area: 1/1/-1/-1;
     display: grid;
+    grid-template-columns: 350px;
     place-content: center;
     gap: 1rem;
 }
@@ -329,4 +332,26 @@ form input {
 .inputForm input {
     grid-area: 1/1/2/2;
     padding: 1rem;
+}
+
+.inputForm input:focus {
+    outline: none;
+}
+
+.inputText:valid {
+    background-color: green;
+    color: white;
+}
+
+.inputText:valid::placeholder {
+    color: white;
+}
+
+.inputText:invalid {
+    background-color: red;
+    color: white;
+}
+
+.inputText:invalid::placeholder {
+    color: white;
 }

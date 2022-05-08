@@ -24,7 +24,7 @@
         <title>Developers Team</title>
 </head>
 
-<body class="container">
+<body class="container" id="container">
     <!-- background de la page  -->
     <div class="background"></div>
 
@@ -39,7 +39,7 @@
 
     <!-- titulo -->
     <div id="title" class="tittle">
-        <h1 class="mainTitle">We build your website</h1>
+        <h1 class="mainTitle">Contactanos con el formulario de abajo!.</h1>
         <p>We take your ideas to code. <br><br>We put together your website so that you can advance in your digital footprint.
         </p>
     </div>
@@ -90,36 +90,36 @@
             <div class="form">
                 <form action="">
                     <label for="name">Name:</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="nameContact" value="">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="emailContact" value="">
                     <label for="text">Add comment:</label>
-                    <input type="text" name="text" id="text">
+                    <input type="text" name="text" id="comentarios" value="">
                 </form>
-                <input class="button" type="button" value="Send Message">
+                <input class="button" type="button" value="Send Message" id="enviarComentarios">
             </div>
         </div>
     </footer>
 
     <!-- ventana de login  -->
 
-    <div class="login">
-        <h1>Bienvenido <span class="userName"></span></h1>
-        <div class="backgroundForm"></div>
+    <div id="loginContainer" class="login">
+        <h1>Bienvenido <span id="userName"></span></h1>
         <form class="formLogin" action="">
             <div class="inputForm">
                 <label for="usuario"></label>
-                <input type="text" name="" id="user" placeholder="Usuario">
+                <input class="inputText" type="text" name="" id="userForm" placeholder="Ingresá tu nombre de usuario" value="" required>
             </div>
-            <div class="inputForm">
-                <label for="password"></label>
-                <input type="password" name="" id="password" placeholder="Password">
+            <div class="inputForm ">
+                <label for="password "></label>
+                <input class="inputText" type="email" name=" " id="emailForm" placeholder="Ingresá tu email" value="" required>
             </div>
+            <input type="button" id="buttonForm" value="ENTRAR">
 
         </form>
     </div>
 
-    <script src="js/segunda-entrega.js"></script>
+    <script src="js/segunda-entrega.js "></script>
 </body>
 
 </html>

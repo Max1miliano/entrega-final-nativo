@@ -2,9 +2,11 @@ let nombre = prompt('Ingrese su nombre: ');
 
 let span = document.getElementById('userName');
 
-span.innerHTML = nombre;
+//operador ternario
+span.innerHTML = nombre.length > 1 ? nombre : "a Developer's Team";
 
-// localStorage.clear();
+
+
 
 let inputUsuario = document.getElementById('userForm').length;
 let inputEmail = document.getElementById('emailForm').length;
@@ -18,19 +20,27 @@ ingresar.addEventListener('click', guardarDatos);
 
 function guardarDatos() {
 
-    console.log('El click funciona');
     let valueUser = document.getElementById('userForm').value;
     let valueEmail = document.getElementById('emailForm').value;
 
     localStorage.setItem('nombreUser', valueUser);
     localStorage.setItem('emailUser', valueEmail);
 
-    alert('Inicio de sesión exitoso');
+    // Operador AND 
+    valueUser != '' && alert('Inicio de sesión exitoso');
+
+    //Operador OR
+    alert(valueUser || 'Agrega tu email.');
 
     let cerrarLogin = document.getElementById('loginContainer');
-    cerrarLogin.style.display = 'none';
+
+    //ACCESO CONDICIONAL A UN OBJETO
+    cerrarLogin.style.display = valueUser?.length > 1 ? 'none' :  'grid';
+
+    // console.log(cerrarLogin?.style?.display);
+
     let habilitarScroll = document.getElementById('container');
-    habilitarScroll.style.overflow = 'auto';
+    habilitarScroll.style.overflow = valueUser?.length > 1 ? 'auto' :  'hidden';
 }
 
 let agregarNombre = document.getElementById('nameContact');

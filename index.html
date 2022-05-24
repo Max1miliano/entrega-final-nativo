@@ -13,15 +13,20 @@
       rel="stylesheet"
     />
     <!-- termina fuentes  -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="shortcut icon" href="imagenes/favicon.png" type="image/x-icon" />
 
+    <!-- css  -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="imagenes/favicon.png" type="image/x-icon" />
 
     <!-- toastify  -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- sweetalert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    
     <title>Developers Team</title>
   </head>
 
@@ -71,15 +76,18 @@
         Traenos tu idea y nosotros las desarrollamos.
       </p>
       <div class="profiles">
-        <div class="profileCard1">
-          <img src="imagenes/fotodemaxi.png" alt="" />
-          <h4>Maximiliano</h4>
-          <p>26 años<br />Studyng Full Stack Developer</p>
+        <div >
+          <!-- ME TRAIGO DATA DE UN JSON -->
+          <img  src="imagenes/fotodemaxi.png" alt="" />
+          <h4 id="nombrePerfil1" ></h4>
+          <p id="edadPerfil1"></p>
+          <p id="estudiosPerfil1"></p>
         </div>
-        <div class="profileCard2">
-          <img src="imagenes/fotodesanti.jpg" alt="" />
-          <h4>Santiago</h4>
-          <p>22 años<br />Studyng Frontend Developer</p>
+        <div>
+          <img  src="imagenes/fotodesanti.jpg" alt="" />
+          <h4 id="nombrePerfil2" ></h4>
+          <p id="edadPerfil2"><br /></p>
+          <p id="estudiosPerfil2"></p>
         </div>
       </div>
     </div>
@@ -134,7 +142,7 @@
 
     <!-- ventana de login  -->
 
-    <div id="loginContainer" class="login">
+    <!-- <div id="loginContainer" class="login">
       <h1>Bienvenido <span id="userName"></span></h1>
       <form class="formLogin" action="">
         <div class="inputForm">
@@ -163,12 +171,14 @@
         </div>
         <input type="button" id="buttonForm" value="ENTRAR" />
       </form>
-    </div>
+    </div> -->
 
     <!-- Mis scripts  -->
     <script src="js/librerias.js "></script>
 
     <!-- Toastify  -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    
   </body>
 </html>

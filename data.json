@@ -1,0 +1,14 @@
+[
+    {
+        "nombre": "Maximiliano",
+        "edad": 26,
+        "estudios": "Full Stack Developer",
+        "photo": "imagenes/fotodemaxi.png"
+    },
+    {
+        "nombre": "Santiago",
+        "edad": 22,
+        "estudios": "Front End Developer",
+        "photo": "imagenes/fotodesanti.jpg "
+    }
+]
